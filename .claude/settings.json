@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git remote *)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{url_effective}\" https://biology-prep.pages.dev/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://biology-prep.pages.dev/biology-study-v2-standalone.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://biology-prep.pages.dev/biology-knowledge-summary.html)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://biology-prep.pages.dev/biology-exam-platform/biology-exam.html)",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code}\" https://biology-prep.pages.dev/biology-study-v2-standalone.html)",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code}\" https://biology-prep.pages.dev/biology-knowledge-summary.html)",
+      "Bash(curl -sL -o /dev/null -w \"%{http_code}\" https://biology-prep.pages.dev/biology-exam-platform/biology-exam.html)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ]
+  }
+}
