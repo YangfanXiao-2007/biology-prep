@@ -1,0 +1,43 @@
+# 只推送最终版本文件，排除中间版本
+
+# ===== 根目录 =====
+# 最终版本推送：index.html + biology-study-v2-standalone.html + biology-knowledge-summary.html
+
+# 排除中间版本
+biology-study-platform-standalone.html
+biology-study-v2.html
+biology-study-platform.html
+初高中生物知识点完整清单.html
+生物知识点思维导图.html
+
+# ===== exam-platform =====
+# 最终版本推送：biology-exam.html（图片已 base64 嵌入，无需传 exam_images/）
+
+# 排除中间版本
+biology-exam-platform/index.html
+biology-exam-platform/biology-exam-lite.html
+biology-exam-platform/real_question_bank.js
+
+# 排除真题图片（已内嵌不需要）
+biology-exam-platform/assets/
+
+# ===== 其他 =====
+# 排除 study-platform 文件夹（中间版本都在里面）
+biology-study-platform/
+
+# 排除原始文档（word、pdf 等原始资料）
+*.doc
+*.docx
+*.pdf
+
+# 排除零散文件夹
+模拟卷/
+真题/
+知识点/
+课标/
+生物知识点/
+
+# 排除系统文件
+*.log
+.DS_Store
+Thumbs.db

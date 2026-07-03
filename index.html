@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>初中生物教师选调 · 备考平台</title>
+  <style>
+    :root {
+      --bg: #f0f4f8;
+      --card: #ffffff;
+      --ink: #1a2332;
+      --muted: #6b7a8f;
+      --accent1: #14a085;
+      --accent2: #2563eb;
+      --accent3: #d97706;
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0d8069 0%, #14a085 50%, #0ea5a9 100%);
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.4rem;
+      position: relative;
+    }
+    .hero .sub {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      position: relative;
+    }
+    .hero .user-tag {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.3rem 1rem;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      position: relative;
+    }
+
+    /* Content */
+    .container {
+      flex: 1;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+      width: 100%;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:active {
+      transform: scale(0.98);
+    }
+    .card-body {
+      padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .card-icon.exam { background: #ecfdf3; color: #14a085; }
+    .card-icon.study { background: #eff6ff; color: #2563eb; }
+    .card-icon.ref  { background: #fffbeb; color: #d97706; }
+
+    .card-info h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .card-info p {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .card-arrow {
+      margin-left: auto;
+      color: var(--muted);
+      opacity: 0.3;
+      font-size: 1.2rem;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 1.5rem 0 0.6rem 0.2rem;
+    }
+
+    /* Status bar */
+    .status-bar {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      margin-bottom: 1.5rem;
+    }
+    .status-bar .label { color: var(--muted); }
+    .status-bar .value { color: var(--ink); font-weight: 600; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+    .footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Quick tips */
+    .tip-box {
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+    .tip-box strong { color: var(--ink); }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>🌿 生物教师选调备考</h1>
+  <p class="sub">初中生物 · 初高中知识覆盖</p>
+  <span class="user-tag">👤 徐海霞</span>
+</div>
+
+<div class="container">
+
+  <!-- Status -->
+  <div class="status-bar">
+    <span class="label">📌 学习进度</span>
+    <span class="value">本地存储 · 自动保存</span>
+  </div>
+
+  <!-- Main Cards -->
+  <a class="card" href="biology-study-v2-standalone.html">
+    <div class="card-body">
+      <div class="card-icon study">📖</div>
+      <div class="card-info">
+        <h3>学习平台</h3>
+        <p>扫卡 → 验证 → 学习 → 测试 → 考试<br>知识点掌握度分析，薄弱点定向突破</p>
+      </div>
+      <span class="card-arrow">›</span>
+    </div>
+  </a>
+
+  <a class="card" href="biology-exam-platform/biology-exam.html">
+    <div class="card-body">
+      <div class="card-icon exam">📝</div>
+      <div class="card-info">
+        <h3>考试平台</h3>
+        <p>2019-2021 湖南真题 · 模拟组卷<br>计时答题，智能分析错因与知识漏洞</p>
+      </div>
+      <span class="card-arrow">›</span>
+    </div>
+  </a>
+
+  <a class="card" href="biology-knowledge-summary.html">
+    <div class="card-body">
+      <div class="card-icon ref">📚</div>
+      <div class="card-info">
+        <h3>知识总结</h3>
+        <p>初中生物 10 大模块完整清单<br>高频考点速查，考前快速回顾</p>
+      </div>
+      <span class="card-arrow">›</span>
+    </div>
+  </a>
+
+  <!-- Quick tips for mobile -->
+  <div class="tip-box">
+    <strong>📱 手机使用提示：</strong><br>
+    · 在 Safari 打开本页后，点「分享」→「添加到主屏幕」<br>
+    · 以后从桌面图标直接进入，无需每次找链接<br>
+    · 所有学习进度自动保存在手机中，不丢失
+  </div>
+</div>
+
+<div class="footer">
+  初中生物教师选调考试 · 备考工具集<br>
+  数据仅保存在本地，不会上传至任何服务器<br>
+  <span style="font-size:0.7rem;opacity:0.6;">试题来源于网络公开资源，仅用于学习交流·如有侵权请联系删除</span>
+</div>
+
+</body>
+</html>
